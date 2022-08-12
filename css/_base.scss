@@ -1,0 +1,53 @@
+:root {
+  --color-font: #000;
+  --color-primary-light-1: #d7f5dc;
+  --color-primary-light-2: #f8fff9;
+  --color-primary-light-3: #fafffb;
+  --color-primary-dark: #20b15a;
+}
+
+$bp-largest: 75em; // 1200px 1200 / 16 = 75
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+/*
+
+font guide
+400 - regular
+500 - medium
+600 - semi bold
+700 - bold
+
+
+100-200-400-600-800-1200-1400
+40-60-80-100
+10-20-30-40-50
+2-21
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}

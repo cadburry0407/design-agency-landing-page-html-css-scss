@@ -1,0 +1,87 @@
+.header {
+  background-color: var(--color-primary-light-1);
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+
+  @media only screen and (max-width: $bp-largest) {
+    padding: 0 2rem 0 2rem;
+  }
+}
+
+.business-solution {
+  padding: 7.5rem 0;
+}
+
+.business-solution .container {
+  flex-direction: column;
+}
+
+.business-solution .offers {
+  display: flex;
+
+  @media only screen and (max-width: $bp-small) {
+    display: block;
+  }
+}
+
+.statistics-container {
+  background-color: var(--color-primary-light-2);
+}
+
+.statistics-container .container {
+  justify-content: center;
+}
+
+.portfolio .container {
+  flex-wrap: wrap;
+
+  display: flex;
+}
+
+.portfolio {
+  padding: 8rem 0 4rem 0;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 4rem 0 2rem 0;
+  }
+}
+
+.testimonials {
+  padding: 0 0 5rem 0;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 0;
+  }
+}
+
+.testimonials .container {
+  flex-wrap: wrap;
+}
+
+.testimonials__wrapper {
+  padding: 8rem 0;
+  display: flex;
+}
+
+.subscribe-wrapper .container {
+  justify-content: center;
+
+  padding: 8rem;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 3rem;
+  }
+}
+
+.footer-wrapper {
+  background-color: #00ca72;
+  padding: 10rem 0 3rem 0;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 4rem 0 2rem 0;
+  }
+}
