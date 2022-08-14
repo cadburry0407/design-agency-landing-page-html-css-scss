@@ -30,29 +30,24 @@ const toggleMenu = () => {
 
 menuToggleIcon.addEventListener('click', toggleMenu);
 
-const slider = selectElement('.testimonials__wrapper');
-let isDown = false;
-let startX;
-let scrollLeft;
+// Buttons Testimonial Control
 
-slider.addEventListener('mousedown', (e) => {
-  isDown = true;
-  slider.classList.add('active');
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
+const leftBtn = selectElement('#btn-testi-left');
+const rightBtn = selectElement('#btn-testi-right');
+
+const slider = selectElement('.testimonials__wrapper');
+const sliderItem = selectElement('.testimonials__wrapper-item');
+
+const style = window.getComputedStyle(sliderItem);
+let marginRight = style.getPropertyValue('margin-right');
+
+const marginRightNum = parseInt(marginRight.replace(/[^0-9]/g, ''));
+
+leftBtn.addEventListener('click', () => {
+  slider.scrollLeft += sliderItem.offsetWidth + marginRightNum;
 });
-slider.addEventListener('mouseleave', () => {
-  isDown = false;
-  slider.classList.remove('active');
-});
-slider.addEventListener('mouseup', () => {
-  isDown = false;
-  slider.classList.remove('active');
-});
-slider.addEventListener('mousemove', (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 1; //scroll-fast
-  slider.scrollLeft = scrollLeft - walk;
+
+rightBtn.addEventListener('click', () => {
+  console.log('right');
+  slider.scrollLeft -= sliderItem.offsetWidth + marginRightNum;
 });
